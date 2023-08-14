@@ -1,11 +1,11 @@
 # The Poor Man's Feature Flag
 
-> When the mind wanders, where does it go?
+> When your mind wanders, where does it go?
 
 ```swift
-//-------------------------------------=
+//-----------------------------------------=
 // The Poor Man's Feature Flag
-//-------------------------------------=
+//-----------------------------------------=
 // AUTHOR.: Oscar Byström Ericsson
 //
 // FIND...: \/([*/-])([*/-])(FLAG)([*/-])\/
@@ -14,30 +14,31 @@
 // LINE...: //*FLAG*/ or /*/FLAG*/
 // HEAD...: //*FLAG-/ or /*/FLAG-/
 // TAIL...: //-FLAG*/ or /-/FLAG*/
+//-----------------------------------------=
 
 print("Hello")
 
-//*FLAG0*///*FLAG1*/ print("1th")
-//*FLAG0*//*/FLAG1*/ print("2nd")
-/*/FLAG0*///*FLAG1*/ print("3rd")
-/*/FLAG0*//*/FLAG1*/ print("4th")
+//*FLAG1*///*FLAG2*/ print("1st")
+//*FLAG1*//*/FLAG2*/ print("2nd")
+/*/FLAG1*///*FLAG2*/ print("3rd")
+/*/FLAG1*//*/FLAG2*/ print("4th")
 
-/*/FLAG0-/
 /*/FLAG1-/
+/*/FLAG2-/
 print("1st")
-/-/FLAG1*/
-//*FLAG1-/
+/-/FLAG2*/
+//*FLAG2-/
 print("2nd")
-//-FLAG1*/
-/-/FLAG0*/
-//*FLAG0-/
-/*/FLAG1-/
-print("3rd")
+//-FLAG2*/
 /-/FLAG1*/
 //*FLAG1-/
+/*/FLAG2-/
+print("3rd")
+/-/FLAG2*/
+//*FLAG2-/
 print("4th")
+//-FLAG2*/
 //-FLAG1*/
-//-FLAG0*/
 
 print("World")
 ```
